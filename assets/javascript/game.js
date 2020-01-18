@@ -33,6 +33,13 @@ function crystalGen() {
   }
 }
 
+// Conditional for win/lose:
+// True/false do the same thing basically. Displays
+// a win or lose div in the center of the screen,
+// resets the counters, ++ to win or lose, writes
+// to the DOM, and reruns the functions to start
+// a new round.
+// also console.log() the array to make it easier
 function winLose() {
   if (targetNum === score) {
     $('.winner').animate({ opacity: '1.0' });
@@ -61,6 +68,7 @@ function winLose() {
   }
 }
 
+// First time game starts
 crystalGen();
 target();
 $('.score').text(score);
@@ -68,6 +76,7 @@ $('.wins').text(wins);
 $('.loss').text(losses);
 console.log(crystalArr);
 
+// Click events for the crystals
 $('.red').click(function() {
   score += crystalArr[0];
   $('.score').text(score);
