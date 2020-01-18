@@ -8,10 +8,17 @@ var green;
 var blue;
 var yellow;
 
+// Find the target number 19-120
 function target() {
-  targetNum = Math.floor(Math.random() * 120) + 19;
+  targetNum = Math.floor(Math.random() * 102) + 19;
+  $('.target').text(targetNum);
 }
 
+// Generates the random values for each crystal.
+// I added a conditional to always inlude a 1 value for one
+// of the crystals so the user can always win.
+// I couldn't figure out a way to not get duplicates though
+// that is.. not without using code I don't understand yet.
 function crystalGen() {
   for (let i = 0; i < crystalArr.length; i++) {
     crystalArr[i] = Math.floor(Math.random() * 12) + 1;
@@ -24,11 +31,6 @@ function crystalGen() {
   ) {
     crystalArr[Math.floor(Math.random() * 3) + 1] = 1;
   }
-}
-
-function target() {
-  targetNum = Math.floor(Math.random() * 101) + 19;
-  $('.target').text(targetNum);
 }
 
 function winLose() {
