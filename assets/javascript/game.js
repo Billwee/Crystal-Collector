@@ -26,25 +26,63 @@ function crystalGen() {
   }
 }
 
-function equalsOne() {}
+function target() {
+  targetNum = Math.floor(Math.random() * 101) + 19;
+  $('.target').text(targetNum);
+}
+
+function winLose() {
+  if (targetNum === score) {
+    $('.winner').animate({ opacity: '1.0' });
+    setTimeout(function() {
+      $('.winner').animate({ opacity: '0' });
+    }, 3000);
+    wins += 1;
+    $('.wins').text(wins);
+    score = 0;
+    $('.score').text(score);
+    crystalGen();
+    target();
+    console.log(crystalArr);
+  } else if (score > targetNum) {
+    $('.loser').animate({ opacity: '1.0' });
+    setTimeout(function() {
+      $('.loser').animate({ opacity: '0' });
+    }, 3000);
+    losses += 1;
+    $('.loss').text(losses);
+    score = 0;
+    $('.score').text(score);
+    crystalGen();
+    target();
+    console.log(crystalArr);
+  }
+}
 
 crystalGen();
-equalsOne();
+target();
+$('.score').text(score);
+$('.wins').text(wins);
+$('.loss').text(losses);
 console.log(crystalArr);
 
 $('.red').click(function() {
   score += crystalArr[0];
   $('.score').text(score);
+  winLose();
 });
 $('.green').click(function() {
   score += crystalArr[1];
   $('.score').text(score);
+  winLose();
 });
 $('.blue').click(function() {
   score += crystalArr[2];
   $('.score').text(score);
+  winLose();
 });
 $('.yellow').click(function() {
   score += crystalArr[3];
   $('.score').text(score);
+  winLose();
 });

@@ -15,35 +15,39 @@
     <title>Crystal Collector Game</title>
   </head>
   <body>
+    <!-- Title -->
     <div class="titleDiv">
-      <h1 class="title">Crystal Collector</h1>
+      <div>
+        <img class='crystal' src="./assets/images/crystal.jpg" alt="">
+      </div>
+      <div>
+        <h1 class="title">Crystal Collector</h1>
+      </div>
+      <div>
+        <img class ='crystal' src="./assets/images/crystal.jpg" alt="">
+      </div>
     </div>
+    
+    <!-- Description -->
     <div class="descriptionDiv">
       <p class="description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima at
-        natus numquam necessitatibus corporis nostrum magnam illum? Ullam
-        maiores harum nisi exercitationem, eligendi at quis adipisci asperiores
-        quo sapiente error vel rem tempora autem voluptatum ab molestiae
-        inventore odio, reprehenderit eius voluptatem commodi accusantium.
-        Pariatur, tenetur! Vero, ipsum alias velit tenetur rem perspiciatis
-        adipisci quaerat qui explicabo cum dolorem facere, a assumenda
-        voluptates asperiores distinctio est atque corrupti natus ratione itaque
-        neque excepturi! Praesentium neque, repudiandae tempora sapiente beatae
-        omnis expedita voluptates maxime accusamus doloremque voluptatem iste
-        totam officia! Ullam eligendi ad inventore vitae dolores mollitia facere
-        nihil ipsa quia.
+        Welcome to my Crystal Collector game! In this game you must try to match the target by clicking on the four crystals below to add points to your score. The game begins by showing a target number you need to reach with your score. You add points to this score by clicking the four crystals below. Each crystal as a random value assigned to it that is added to your score when they are clicked. If you match the target score you win, but if you go over the target you lose. Then a new round will start. When that happens each crystal is assigned a new random value and a new target value is displayed. Good Luck!
       </p>
     </div>
+
+    <!-- Target/Score section -->
     <div class="container">
       <div class="targetDiv">
         <p>Target:</p>
-        <p class="target">###</p>
+        <p class="target"></p>
       </div>
       <div class="scoreDiv">
         <p>Score:</p>
-        <p class="score"`>###</p class="score">
+        <p class="score"`></p class="score">
       </div>
     </div>
+
+    <!-- Crystal Section -->
     <div class="crystalDiv">
       <div class="redDiv">
         <img class="red" src="./assets/images/red.png" alt="red crystal" />
@@ -62,16 +66,26 @@
         />
       </div>
     </div>
+
+    <!-- Wins/Losses Section -->
     <div class="container">
-    <div class="winsDiv">
-      <p>Wins:</p>
-      <p class="wins">###</p>
-    </div>
-    <div class="lossDiv">
-      <p>Losses:</p>
-      <p class="loss">###</p>
-    </div>
+      <div class="winsDiv">
+        <p>Wins:</p>
+        <p class="wins"></p>
+      </div>
+      <div class="lossDiv">
+        <p>Losses:</p>
+        <p class="loss"></p>
+      </div>
   </div>
-    <script src="./assets/javascript/game.js"></script>
+
+  <!-- Win/Lose popups -->
+  <div  class="winner">
+    <h1>You Win!</h1>
+  </div>
+  <div  class="loser">
+    <h1>You Lose.</h1>
+  </div>
+  <script src="./assets/javascript/game.js"></script>
   </body>
 </html>
